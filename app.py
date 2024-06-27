@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///form_data.db'
-app.config['SECRET_KEY'] = 'Lekelela'
+app.config['SECRET_KEY'] = os.environ.get('Lekelela')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
